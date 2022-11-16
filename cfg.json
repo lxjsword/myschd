@@ -1,0 +1,4 @@
+{
+    "cleandimg": ["cleandimg", "/home/ryanxjli/data/myschd/cleanimg/cleandimg.py", "cleandimg", "0 */8 * * *"],
+    "upgit": ["upgit", "/home/ryanxjli/data/myschd/upgit/upgit.py", "upgit", "10 */8 * * *"]
+}
