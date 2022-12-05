@@ -25,7 +25,7 @@ import heapq
 
 from call_util import dynamic_call_func, get_content_md5
 
-pool = multiprocessing.Pool(processes=2)
+pool = None
 
 '''
 CALL_PARAMS = [
@@ -191,4 +191,5 @@ def sched():
 
 
 if __name__ == '__main__':
+    pool = multiprocessing.Pool(processes=2)
     sched()
