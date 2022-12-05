@@ -58,7 +58,7 @@ def send_tips():
 
     if sys.platform == 'darwin':
         # osascript -e 'display notification "内容" with title "标题"
-        cmd = f''''display notification "{tip_msg}" with title "健康提醒⏰"'''
+        cmd = 'display notification "{}" with title "健康提醒⏰" '.format(tip_msg)
         subprocess.call(['osascript', '-e', cmd])
     else:
         print(tip_msg)
