@@ -18,6 +18,7 @@ repo_url = [
     '/home/ryanxjli/QQMail/mmsearch',
     '/home/ryanxjli/data/mmsearch_git/mmsearchoss',
     '/home/ryanxjli/data/mmsearch_git/mmsearchossnew',
+    '/home/ryanxjli/data/mmsearch_git/mmsearchossmp',
 ]
 
 logging.basicConfig(stream=sys.stdout,

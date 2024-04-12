@@ -30,13 +30,16 @@ def cleandimg():
         if len(out_arr) < 5:
             continue
         imageid, num, unit = out_arr[2], int(out_arr[3]), out_arr[4]
-        if re.search('mmsearchossdendenmushi', line):
+        if re.search('ryanxjli', line) or re.search('bijiazhu', line):
             if unit == 'days' and num >= 7:
                 logging.info(line)
                 clean_imgids.append(imageid)
-            elif unit == 'weeks':
+            elif unit == 'weeks' or unit == 'months':
                 logging.info(line)
                 clean_imgids.append(imageid)
+        elif re.search('<none>', line):
+            logging.info(line)
+            clean_imgids.append(imageid)
 
         # if re.search('mmsearchossdendenmushi', line) and re.search('weeks ago', line):
             # logging.info(line)
@@ -45,7 +48,7 @@ def cleandimg():
     logging.info(clean_imgids)
 
     if len(clean_imgids) > 0:
-        out = subprocess.run('docker rmi {}'.format(' '.join(clean_imgids)), shell=True, capture_output=True)
+        out = subprocess.run('docker rmi -f {}'.format(' '.join(clean_imgids)), shell=True, capture_output=True)
         logging.info(out.stdout)
 
 

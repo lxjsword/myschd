@@ -9,10 +9,7 @@
 # * Filename      : myschd.py
 # * Description   :
 # **********************************************************
-from ast import Call
 from datetime import datetime
-from sre_constants import CALL
-from subprocess import call
 import sys
 import os
 import asyncio
